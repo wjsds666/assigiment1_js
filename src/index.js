@@ -66,9 +66,7 @@ async function main () {
   const products = getInitialProducts()
   const cart = createCart()
 
-  let running = true
-
-  while (running) {
+  while (true) {
     displayCatalog(products)
     displayCart(cart, products)
 
@@ -81,7 +79,6 @@ async function main () {
 
     if (action === 'exit' || action === 'q') {
       console.log('\nThank you for shopping with us! Goodbye.')
-      running = false
       break
     }
 
